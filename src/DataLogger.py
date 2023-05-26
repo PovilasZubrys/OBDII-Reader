@@ -1,12 +1,16 @@
 class DataLogger:
 
-    current_values = {}
+    CurrentValues = {}
+    AvailableCommands = []
 
-    def set_current_value(self, data, data_type):
-        self.current_values[data_type] = data
+    def set_current_value(self, data, DataType):
+        if DataType not in self.AvailableCommands:
+            self.AvailableCommands.append(DataType)
 
-    def get_current_value(self, data_type):
-        if data_type in self.current_values:
-            if self.current_values[data_type]:
-                return self.current_values[data_type]
+        self.CurrentValues[DataType] = data
+
+    def get_current_value(self, DataType):
+        if DataType in self.CurrentValues:
+            if self.CurrentValues[DataType]:
+                return self.CurrentValues[DataType]
         return 'N/A'

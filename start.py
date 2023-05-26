@@ -9,8 +9,8 @@ sendData = SendData()
 
 def start():
     while True:
-        speed = appObd.DataLogger.get_current_value('SPEED')
-        sendData.connect(speed)
+        for DataType in appObd.DataLogger.AvailableCommands:
+            sendData.query(appObd.DataLogger.get_current_value(DataType), DataType)
 
 
 if __name__ == '__main__':
