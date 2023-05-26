@@ -16,15 +16,8 @@ class Run:
             print('Connecting')
             self.connection = obd.Async("/dev/pts/2")
 
-        self.remove_unsupported_commands()
         self.start_watch_commands()
         self.connection.start()
-
-    def remove_unsupported_commands(self):
-        if self.connection is not None:
-            for value in self.commands:
-                if self.connection.supports(value) is False:
-                    self.commands.remove(value)
 
     def start_watch_commands(self):
         for c in self.commands:

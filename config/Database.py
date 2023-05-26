@@ -1,4 +1,4 @@
-database_credentials = {
+DatabaseCredentials = {
     "host": "-",
     "user": "-",
     "password": "-",
