@@ -1,5 +1,5 @@
 import mysql.connector as mysql
-import config.Database as db
+import config.Database as Db
 
 
 class SendData:
@@ -8,18 +8,19 @@ class SendData:
     mydb = None
 
     def __init__(self):
-        self.mydb = mysql.connect(
-            host=db.database_credentials['host'],
-            user=db.database_credentials['user'],
-            password=db.database_credentials['password'],
-            database=db.database_credentials['database']
-        )
+        if self.mydb is None:
+            self.mydb = mysql.connect(
+                host=Db.DatabaseCredentials['host'],
+                user=Db.DatabaseCredentials['user'],
+                password=Db.DatabaseCredentials['password'],
+                database=Db.DatabaseCredentials['database']
+            )
 
-    def connect(self, r):
+    def query(self, r, TableName):
         if r != 'N/A':
             if self.lastValue != r:
                 cursor = self.mydb.cursor()
-                sql = "INSERT INTO speed (value) VALUES (%s)"
+                sql = "INSERT INTO " + TableName.lower() + " (value) VALUES (%s)"
                 cursor.execute(sql, (r,))
 
                 self.mydb.commit()
