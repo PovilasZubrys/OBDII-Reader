@@ -4,7 +4,7 @@ import config.Database as Db
 
 class SendData:
 
-    lastValue = 0
+    lastValue = {}
     mydb = None
 
     def __init__(self):
@@ -18,10 +18,11 @@ class SendData:
 
     def query(self, r, TableName):
         if r != 'N/A':
-            if self.lastValue != r:
+            if TableName in self.lastValue and self.lastValue[TableName] != r or TableName not in self.lastValue:
                 cursor = self.mydb.cursor()
                 sql = "INSERT INTO " + TableName.lower() + " (value) VALUES (%s)"
                 cursor.execute(sql, (r,))
 
                 self.mydb.commit()
-                self.lastValue = r
+
+            self.lastValue[TableName] = r
