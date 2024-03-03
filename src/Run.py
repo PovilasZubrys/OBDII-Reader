@@ -1,7 +1,8 @@
-import obd
 from config.ObdCommands import ObdCommands
 from src.DataLogger import DataLogger
-
+from src.FirstRunSetup import FirstRunSetup
+import obd
+import json
 
 class Run:
 
@@ -10,12 +11,17 @@ class Run:
 
     def __init__(self):
         self.DataLogger = DataLogger()
+        self.FirstRunSetup = FirstRunSetup()
 
     def start(self):
+        data = self.load_settings()
+        if data['first_run'] is True:
+            self.FirstRunSetup.setup(data)
+
         if self.connection is None or self.connection.is_connected() is False:
             print('Connecting')
             # When debugging
-            self.connection = obd.Async("/dev/pts/1")
+            self.connection = obd.Async("/dev/pts/6")
 
             # When connected to actual OBD scan tool
             # self.connection = obd.Async("/dev/ttyACM0")
@@ -32,3 +38,9 @@ class Run:
             return
 
         self.DataLogger.set_current_value(r.value.m, r.command.name)
+
+    def load_settings(self):
+        file = open('config/Settings.json')
+        data = json.load(file)
+
+        return data
