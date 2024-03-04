@@ -1,5 +1,5 @@
 ObdCommands = [
-    # 'obd.commands.RPM',
+    'obd.commands.RPM',
     'obd.commands.SPEED',
     # 'obd.commands.ENGINE_LOAD',
     # 'obd.commands.COOLANT_TEMP',

@@ -21,7 +21,7 @@ class Run:
         if self.connection is None or self.connection.is_connected() is False:
             print('Connecting')
             # When debugging
-            self.connection = obd.Async("/dev/pts/6")
+            self.connection = obd.Async("/dev/pts/3")
 
             # When connected to actual OBD scan tool
             # self.connection = obd.Async("/dev/ttyACM0")
