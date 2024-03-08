@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # Database credentials
-obd-reader/config/Database.py
+config/Database.py
