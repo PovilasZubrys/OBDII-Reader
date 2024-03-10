@@ -161,3 +161,4 @@ cython_debug/
 
 # Database credentials
 config/Database.py
+config/MercureCredentials.py
