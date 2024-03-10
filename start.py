@@ -10,6 +10,7 @@ sendData = SendData()
 def start():
     while True:
         for DataType in appObd.DataLogger.AvailableCommands:
+            sendData.send_request_mercure(appObd.DataLogger.get_current_value(DataType), DataType)
             sendData.query(appObd.DataLogger.get_current_value(DataType), DataType)
 
 

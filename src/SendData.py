@@ -2,12 +2,16 @@ import mysql.connector as mysql
 import config.Database as Db
 import json
 from datetime import datetime
+import requests
+import config.MercureCredentials as mercure
+import jwt
 
 class SendData:
 
     lastValue = {}
     mydb = None
     vehicle_id = None
+    bearer_token = None
 
     def __init__(self):
         if self.mydb is None:
@@ -17,6 +21,10 @@ class SendData:
                 password=Db.DatabaseCredentials['password'],
                 database=Db.DatabaseCredentials['database']
             )
+
+        self.bearer_token = jwt.encode(payload=mercure.MercureCredentials['payload'],
+                         key=mercure.MercureCredentials['auth_jwt'],
+                         algorithm=mercure.MercureCredentials['algorithm'])
 
     def query(self, r, TableName):
         if self.vehicle_id is None:
@@ -41,3 +49,18 @@ class SendData:
         cursor.execute(sql, (data['authentication_token'],))
         vehicle_id = cursor.fetchone()
         self.vehicle_id = vehicle_id[0]
+
+    def send_request_mercure(self, r, TableName):
+        if self.vehicle_id is None:
+            self.get_vehicle_id()
+
+        if r != 'N/A':
+            if TableName in self.lastValue and self.lastValue[TableName] != r or TableName not in self.lastValue:
+                headers = {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Bearer ' + self.bearer_token
+                }
+
+                data = {'topic': '/vehicle_data', 'data': json.dumps({TableName.lower(): r})}
+
+                requests.post(mercure.MercureCredentials['endpoint_url'], headers=headers, data=data)
