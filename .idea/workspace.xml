@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Ignore mercure files">
-      <change afterPath="$PROJECT_DIR$/config/MercureCredentials.example.py" afterDir="false" />
+    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Add data sending through mercure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SendData.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SendData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/start.py" afterDir="false" />
     </list>
@@ -42,7 +40,7 @@
     "Python.ObdCommands.executor": "Run",
     "Python.Run.executor": "Run",
     "Python.SendData.executor": "Debug",
-    "Python.start.executor": "Debug",
+    "Python.start.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -122,7 +120,7 @@
       <workItem from="1709994114408" duration="1000" />
       <workItem from="1709994975413" duration="5955000" />
       <workItem from="1710065819378" duration="891000" />
-      <workItem from="1710079553548" duration="9741000" />
+      <workItem from="1710079553548" duration="14254000" />
     </task>
     <task id="LOCAL−00001" summary="comimit">
       <option name="closed" value="true" />
@@ -159,7 +157,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1710086713735</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Add data sending through mercure">
+      <option name="closed" value="true" />
+      <created>1710094959333</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1710094959333</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +187,8 @@
     <MESSAGE value="Updated script" />
     <MESSAGE value="Add database example" />
     <MESSAGE value="Ignore mercure files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore mercure files" />
+    <MESSAGE value="Add data sending through mercure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add data sending through mercure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -204,6 +210,6 @@
     <SUITE FILE_PATH="coverage/OBDII_Reader$SendData.coverage" NAME="SendData Coverage Results" MODIFIED="1709850117570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$ObdCommands.coverage" NAME="ObdCommands Coverage Results" MODIFIED="1709333614800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$Run.coverage" NAME="Run Coverage Results" MODIFIED="1709499516791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710094799317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710106492938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

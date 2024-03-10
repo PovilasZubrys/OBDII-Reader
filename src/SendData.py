@@ -61,6 +61,6 @@ class SendData:
                     'Authorization': 'Bearer ' + self.bearer_token
                 }
 
-                data = {'topic': '/vehicle_data', 'data': json.dumps({TableName.lower(): r})}
+                data = {'topic': '/vehicle_data/' + str(self.vehicle_id), 'data': json.dumps({TableName.lower(): r})}
 
                 requests.post(mercure.MercureCredentials['endpoint_url'], headers=headers, data=data)
