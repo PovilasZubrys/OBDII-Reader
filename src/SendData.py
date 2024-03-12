@@ -1,3 +1,5 @@
+import random
+
 import mysql.connector as mysql
 import config.Database as Db
 import json
@@ -45,7 +47,7 @@ class SendData:
         data = json.loads(data.read())
 
         cursor = self.mydb.cursor()
-        sql = "SELECT v.id FROM vehicle v LEFT JOIN device d ON v.device_id = d.id WHERE d.authentication_token = %s"
+        sql = "SELECT vehicle_id FROM device WHERE authentication_token = %s"
         cursor.execute(sql, (data['authentication_token'],))
         vehicle_id = cursor.fetchone()
         self.vehicle_id = vehicle_id[0]
