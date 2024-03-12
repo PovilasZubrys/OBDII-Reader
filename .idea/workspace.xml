@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Optimise data sending">
+    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Add support for engine load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/ObdCommands.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/ObdCommands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.py" afterDir="false" />
@@ -41,7 +41,7 @@
     "Python.ObdCommands.executor": "Run",
     "Python.Run.executor": "Run",
     "Python.SendData.executor": "Debug",
-    "Python.start.executor": "Debug",
+    "Python.start.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -124,7 +124,7 @@
       <workItem from="1710079553548" duration="14497000" />
       <workItem from="1710164848892" duration="601000" />
       <workItem from="1710283279273" duration="1018000" />
-      <workItem from="1710285615984" duration="940000" />
+      <workItem from="1710285615984" duration="1472000" />
     </task>
     <task id="LOCAL−00001" summary="comimit">
       <option name="closed" value="true" />
@@ -175,7 +175,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1710106585675</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Add support for engine load">
+      <option name="closed" value="true" />
+      <created>1710286618381</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1710286618381</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +207,8 @@
     <MESSAGE value="Ignore mercure files" />
     <MESSAGE value="Add data sending through mercure" />
     <MESSAGE value="Optimise data sending" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimise data sending" />
+    <MESSAGE value="Add support for engine load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add support for engine load" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -217,6 +225,6 @@
     <SUITE FILE_PATH="coverage/OBDII_Reader$SendData.coverage" NAME="SendData Coverage Results" MODIFIED="1709850117570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$ObdCommands.coverage" NAME="ObdCommands Coverage Results" MODIFIED="1709333614800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$Run.coverage" NAME="Run Coverage Results" MODIFIED="1709499516791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710286516551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710287058770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
