@@ -1,0 +1,5 @@
+mysql_connector_repackaged==0.3.1
+obd==0.7.2
+PyJWT==2.3.0
+PyJWT==2.8.0
+Requests==2.31.0

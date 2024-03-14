@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Add support for engine load">
+    <list default="true" id="7583babb-a09d-4df1-8ebc-19bb36207574" name="Changes" comment="Add support for coolant tmep">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/ObdCommands.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/ObdCommands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Run.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SendData.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/SendData.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,26 +35,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.ObdCommands.executor": "Run",
-    "Python.Run.executor": "Run",
-    "Python.SendData.executor": "Debug",
-    "Python.start.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/povilaszubrys/projects/OBDII-Reader/config",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.ObdCommands.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Run.executor&quot;: &quot;Run&quot;,
+    &quot;Python.SendData.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.start.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl.localhost/Ubuntu/home/povilaszubrys/projects/OBDII-Reader/config&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\povilaszubrys\projects\OBDII-Reader\config" />
@@ -124,7 +123,8 @@
       <workItem from="1710079553548" duration="14497000" />
       <workItem from="1710164848892" duration="601000" />
       <workItem from="1710283279273" duration="1018000" />
-      <workItem from="1710285615984" duration="1472000" />
+      <workItem from="1710285615984" duration="1576000" />
+      <workItem from="1710316698857" duration="4219000" />
     </task>
     <task id="LOCAL−00001" summary="comimit">
       <option name="closed" value="true" />
@@ -182,7 +182,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1710286618381</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Add support for coolant tmep">
+      <option name="closed" value="true" />
+      <created>1710287154199</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1710287154199</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +215,8 @@
     <MESSAGE value="Add data sending through mercure" />
     <MESSAGE value="Optimise data sending" />
     <MESSAGE value="Add support for engine load" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add support for engine load" />
+    <MESSAGE value="Add support for coolant tmep" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add support for coolant tmep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -225,6 +233,6 @@
     <SUITE FILE_PATH="coverage/OBDII_Reader$SendData.coverage" NAME="SendData Coverage Results" MODIFIED="1709850117570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$ObdCommands.coverage" NAME="ObdCommands Coverage Results" MODIFIED="1709333614800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
     <SUITE FILE_PATH="coverage/OBDII_Reader$Run.coverage" NAME="Run Coverage Results" MODIFIED="1709499516791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
-    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710287058770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/OBDII_Reader$start.coverage" NAME="start Coverage Results" MODIFIED="1710332125146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
