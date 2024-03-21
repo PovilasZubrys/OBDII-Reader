@@ -13,6 +13,8 @@ class Gps:
         serial.write(b'AT+CGNSINF\r\n')
         while True:
             response = serial.readline().decode('utf-8')
+            if ',,,,,,' in response:
+                return {}
 
             if '+CGNSINF: 1,' in response:
                 parts = response.split(',')

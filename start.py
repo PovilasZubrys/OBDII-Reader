@@ -29,6 +29,9 @@ def get_gps_data():
 
     while True:
         coordinates = Gps.get_gps_location(serial)
+        if not coordinates:
+            continue
+
         appObd.DataLogger.set_current_value(coordinates, 'gps')
         appObd.DataLogger.add_data_batch(coordinates, 'gps', appObd.get_vehicle_id, datetime.now().strftime('%Y-%m-%d, %H:%M:%S'))
         time.sleep(1)
