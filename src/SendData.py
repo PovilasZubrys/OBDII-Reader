@@ -24,12 +24,11 @@ class SendData:
 
     def send_request_mercure(self, r, TableName, VehicleId):
         if r != 'N/A' and VehicleId is not None:
-            if TableName in self.lastValue and self.lastValue[TableName] != r or TableName not in self.lastValue:
-                headers = {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'Authorization': 'Bearer ' + self.bearer_token
-                }
+            headers = {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Bearer ' + self.bearer_token
+            }
 
-                data = {'topic': '/vehicle_data/' + str(VehicleId), 'data': json.dumps({TableName.lower(): r})}
+            data = {'topic': '/vehicle_data/' + str(VehicleId), 'data': json.dumps({TableName.lower(): r})}
 
-                requests.post(mercure.MercureCredentials['endpoint_url'], headers=headers, data=data)
+            requests.post(mercure.MercureCredentials['endpoint_url'], headers=headers, data=data)
