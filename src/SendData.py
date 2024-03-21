@@ -14,7 +14,7 @@ class SendData:
                          algorithm=mercure.MercureCredentials['algorithm'])
 
     def send_data(self, dataBatch):
-        url = "http://192.168.1.175:8000/api/send/vehicle_data"
+        url = "http://livevehicledata.lan/api/send/vehicle_data"
         payload = json.dumps(dataBatch['data'])
         headers = {
             'Content-Type': 'application/json'
