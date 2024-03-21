@@ -1,10 +1,12 @@
 from src.Run import Run
 from src.SendData import SendData
+from src.GPS import Gps
 import threading
 import time
 
 appObd = Run()
 sendData = SendData()
+gps = Gps()
 
 
 def start():
@@ -19,10 +21,22 @@ def database_log():
         sendData.send_data(appObd.DataLogger.get_current_data_batch())
         appObd.DataLogger.set_empty_data_batch()
 
+def get_gps_data():
+    serial = Gps.enable_serial()
+    Gps.enable_gps(serial)
+    time.sleep(1)
+
+    while True:
+        coordinates = Gps.get_gps_location(serial)
+        print(coordinates)
+        time.sleep(1)
+
+
 if __name__ == '__main__':
     print('Starting OBD thread')
     thread = threading.Thread(target=appObd.start)
-    databaseLogThread = threading.Thread(target=database_log())
+    databaseLogThread = threading.Thread(target=database_log)
+    gpsThread = threading.Thread(target=get_gps_data)
     thread.start()
     databaseLogThread.start()
     time.sleep(1)
