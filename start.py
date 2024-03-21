@@ -28,7 +28,8 @@ def get_gps_data():
 
     while True:
         coordinates = Gps.get_gps_location(serial)
-        print(coordinates)
+        appObd.DataLogger.set_current_value(coordinates, 'gps')
+        appObd.DataLogger.add_data_batch(coordinates, 'gps', appObd.get_vehicle_id)
         time.sleep(1)
 
 
