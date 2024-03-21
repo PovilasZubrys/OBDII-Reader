@@ -1,6 +1,7 @@
 from src.Run import Run
 from src.SendData import SendData
 from src.GPS import Gps
+from datetime import datetime
 import threading
 import time
 
@@ -29,7 +30,7 @@ def get_gps_data():
     while True:
         coordinates = Gps.get_gps_location(serial)
         appObd.DataLogger.set_current_value(coordinates, 'gps')
-        appObd.DataLogger.add_data_batch(coordinates, 'gps', appObd.get_vehicle_id)
+        appObd.DataLogger.add_data_batch(coordinates, 'gps', appObd.get_vehicle_id, datetime.now().strftime('%Y-%m-%d, %H:%M:%S'))
         time.sleep(1)
 
 
@@ -38,6 +39,7 @@ if __name__ == '__main__':
     thread = threading.Thread(target=appObd.start)
     databaseLogThread = threading.Thread(target=database_log)
     gpsThread = threading.Thread(target=get_gps_data)
+    gpsThread.start()
     thread.start()
     databaseLogThread.start()
     time.sleep(1)
