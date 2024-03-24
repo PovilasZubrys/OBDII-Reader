@@ -19,10 +19,10 @@ class DataLogger:
     def add_data_batch(self, data, DataType, vehicleId, dateTime):
         if vehicleId is not None:
             tempData = {
-                'data_type': DataType.lower(),
-                'vehicle_id': vehicleId,
-                'value': data,
-                'date': dateTime
+                "data_type": DataType.lower(),
+                "vehicle_id": vehicleId,
+                "value": data,
+                "date": dateTime
             }
 
             self.DataBatch["data"].append(tempData)
