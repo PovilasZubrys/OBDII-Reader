@@ -24,7 +24,7 @@ class Run:
             self.get_vehicle_id()
             print('Connecting')
             # When debugging
-            self.connection = obd.Async("/dev/pts/8")
+            self.connection = obd.Async("/dev/pts/4")
 
             # When connected to actual OBD scan tool
             # self.connection = obd.Async("/dev/ttyACM0")

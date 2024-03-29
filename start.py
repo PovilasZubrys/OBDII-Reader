@@ -42,8 +42,11 @@ if __name__ == '__main__':
     print('Starting OBD thread')
     thread = threading.Thread(target=appObd.start)
     databaseLogThread = threading.Thread(target=database_log)
-    gpsThread = threading.Thread(target=get_gps_data)
-    gpsThread.start()
+
+    # Disable temp.
+    # gpsThread = threading.Thread(target=get_gps_data)
+    # gpsThread.start()
+
     thread.start()
     databaseLogThread.start()
     time.sleep(1)

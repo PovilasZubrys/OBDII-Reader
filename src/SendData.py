@@ -2,6 +2,7 @@ import json
 import requests
 import config.MercureCredentials as mercure
 import jwt
+import config.Credentials as credentials
 
 class SendData:
 
@@ -14,7 +15,7 @@ class SendData:
                          algorithm=mercure.MercureCredentials['algorithm'])
 
     def send_data(self, dataBatch):
-        url = "http://livevehicledata.lan/api/send/vehicle_data"
+        url = credentials.Credentials['api_url']
         payload = json.dumps(dataBatch['data'])
         headers = {
             'Content-Type': 'application/json'
